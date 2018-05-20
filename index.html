@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Trivia Realoaded</title>
+</head>
+
+<body>
+    <!-- Bienvenida -->
+    <h1>Trivia Laboratoria</h1>
+    <div id="welcome">
+        <div id="getUsername" class="">
+            <h3>Cual es tu nombre?</h3>
+            <input type="text" id="username" value="name">
+            <button id="enteredName">Listo</button>
+        </div>
+        <h2 id="demo"></h2>
+
+        <!-- Preguntar si quiere jugar -->
+        <div id="wantToPlay" class="hidden">
+            <h2>Deseas Jugar?</h2>
+            <button onclick="startGame()">Si</button>
+            <button onclick="endGame()">No</button>
+        </div>
+    </div>
+
+    <div id="questions">
+        <h1 id="questionTittle" class = ""></h1>
+        <div id="question1" class="hidden">
+            <h2>01 - En que pais nace Laboratoria?</h2>
+            <span id="answers01">
+                <button id="button1_1" onclick="answer1_1()">Lima</button>
+                <button id="button1_2" onclick="answer1_2()">Santiago</button>
+                <button id="button1_3" onclick="answer1_3()">Guadajalara</button>
+            </span>
+        </div>
+        <div id="question2" class="hidden">
+            <h2>02 - Que lenguaje de programacion aprenderas en el Bootcam?</h2>
+            <span id="answers02">
+                <button id="button2_1" onclick="answer2_1()">PHP</button>
+                <button id="button2_2" onclick="answer2_2()">Python</button>
+                <button id="button2_3" onclick="answer2_3()">javaScript</button>
+            </span>
+        </div>
+        <div id="question3" class="hidden">
+            <h2>03 - Cuantas sedes tiene Laboratoria?</h2>
+            <span id="answers03">
+                <button id="button3_1" onclick="answer3_1()">7</button>
+                <button id="button3_2" onclick="answer3_2()">5</button>
+                <button id="button3_3" onclick="answer3_3()">4</button>
+            </span>
+        </div>
+        <div id="showResults0" class="hidden">
+            <h1>Resultados</h1>
+            <h2>Respuestas Correctas</h2>
+            <h3 id=resultsRight></h3>
+            <h2>Respuestas Incorrectas</h2>
+            <h3 id=resultsWrong></h3>
+        </div>
+        <div id="goodBye"></div>
+
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
