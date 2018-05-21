@@ -26,74 +26,75 @@ function endGame(){
 
 function answer1_1() {
     rightAnswers.push("Lima");
-    document.getElementById("question1").className = "hidden";
-    document.getElementById("question2").className = "";
+
+    hideAndShow("question1", "question2");
 }
 
 function answer1_2() {
     wrongAnswers.push("Santiago");
-    document.getElementById("question1").className = "hidden";
-    document.getElementById("question2").className = "";
+    
+    hideAndShow("question1", "question2");
 }
 
 function answer1_3() {
     wrongAnswers.push("Guadalajara");
-    document.getElementById("question1").className = "hidden";
-    document.getElementById("question2").className = "";
+    
+    hideAndShow("question1", "question2");
 }
 
 function answer2_1() {
     wrongAnswers.push("PHP");
-    document.getElementById("question2").className = "hidden";
-    document.getElementById("question3").className = "";
+    
+    hideAndShow("question2", "question3");
 }
 
 function answer2_2() {
     wrongAnswers.push("Python");
-    document.getElementById("question2").className = "hidden";
-    document.getElementById("question3").className = "";
+    
+    hideAndShow("question2", "question3");
 }
 
 function answer2_3() {
     rightAnswers.push("javaScript");
-    document.getElementById("question2").className = "hidden";
-    document.getElementById("question3").className = "";
-   
+    
+    hideAndShow("question2", "question3"); 
 }
 
 function answer3_1() {
     wrongAnswers.push("7");
-    document.getElementById("question3").className = "hidden";
-    document.getElementById("questionTittle").className = "hidden";
     
     showResults()
 }
 
 function answer3_2() {
     rightAnswers.push("5");
-    document.getElementById("question3").className = "hidden";
-    document.getElementById("questionTittle").className = "hidden";
     
     showResults()
 }
 
 function answer3_3() {
     wrongAnswers.push("4");
-    document.getElementById("question3").className = "hidden";
-    //document.getElementById("question3").className = "";
-    document.getElementById("questionTittle").className = "hidden";
     
     showResults()
 }
 
 function showResults() {
-    
+    hideAndHide("question3", "questionTittle");
+
     document.getElementById("showResults0").className = "";
     document.getElementById("resultsRight").innerHTML = rightAnswers;
     document.getElementById("resultsWrong").innerHTML = wrongAnswers;
 }
 
+function hideAndShow(hideElementName, showElementName) {
+    document.getElementById(hideElementName).className = "hidden";
+    document.getElementById(showElementName).className = "";
+}
 
+function hideAndHide(hideElementName, showElementName) {
+    document.getElementById(hideElementName).className = "hidden";
+    document.getElementById(showElementName).className = "hidden";
+}
 
 
 
