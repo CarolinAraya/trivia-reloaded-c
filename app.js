@@ -86,14 +86,14 @@ function showResults() {
     document.getElementById("resultsWrong").innerHTML = wrongAnswers;
 }
 
-function hideAndShow(hideElementName, showElementName) {
-    document.getElementById(hideElementName).className = "hidden";
-    document.getElementById(showElementName).className = "";
+function hideAndShow(hideQuestionOn, showNextQuestion) {
+    document.getElementById(hideQuestionOn).className = "hidden";
+    document.getElementById(showNextQuestion).className = "";
 }
 
-function hideAndHide(hideElementName, showElementName) {
-    document.getElementById(hideElementName).className = "hidden";
-    document.getElementById(showElementName).className = "hidden";
+function hideAndHide(hideQuestion3, hideQuestionTittle) {
+    document.getElementById(hideQuestion3).className = "hidden";
+    document.getElementById(hideQuestionTittle).className = "hidden";
 }
 
 
